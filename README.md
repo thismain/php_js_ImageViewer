@@ -7,3 +7,6 @@ Make a folder in 'someFolder', let's say, 'imageFolder';
 Make a folder in 'imageFolder', which must be called 'thumbs';
 Put your fullsize images alone in the folder called 'imageFolder;
 Edit the 3 php files, thumbsU.php, imageViewerU.php, and deleterU.php, to make the path to 'someFolder' point to the actual name you chose for this folder;
+Change the permissions on the 'imageFolder' and 'thumbs' folder to read and write.
+On your local web server, load the url:
+http://localhost/someFolder/thumbsU.php?folder=imagefolder
