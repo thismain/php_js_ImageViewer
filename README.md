@@ -1,5 +1,3 @@
-# php_js_ImageViewer
-
 php_js_ImageViewer is a no frills image viewer that makes thumbnails, links them to the fullsize image, and allows for panning and accurate zooming, centered on the cursor. 
 
 1) Put the php files together in, say 'someFolder';
