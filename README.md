@@ -14,7 +14,7 @@ php_js_ImageViewer is a no frills image viewer that makes thumbnails, links them
 5) Edit the 3 php files, thumbsU.php, imageViewerU.php, and deleterU.php, to make the path to 'someFolder' point to the actual name you chose for this folder;
 
 6) Change the permissions on 'someFolder' and subfolders to read, write, execute:
-On Ubuntu, in the console, the command was:
+On Ubuntu, in the console, the command was:   
 sudo chmod -R 777 /var/www/html/someFolder
 
 7) Put some images in the 'images' folder;
