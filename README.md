@@ -19,7 +19,7 @@ sudo chmod -R 777 /var/www/html/someFolder
 
 7) Put some images in the 'images' folder;
 
-8) On your local web server, load the url:
+8) On your local web server, load the url:   
 http://localhost/someFolder/thumbsU.php?folder=images
 
 **The Expected Result:**    
