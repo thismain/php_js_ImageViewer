@@ -21,6 +21,3 @@ http://localhost/someFolder/thumbsU.php?folder=images
 
 The Expected Result:
 The thumbnails will be created and displayed. Each thumbnail is a link to the fullsize image, which may be viewed with panning and accurate zooming, centered on the cursor.
-
-The Actual Result:
-It did not work. Sorry future me, you will have to figure it out.
