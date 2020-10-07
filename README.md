@@ -2,7 +2,7 @@
 
 php_js_ImageViewer is a no frills image viewer that makes thumbnails, links them to the fullsize image, and allows for panning and accurate zooming, centered on the cursor. 
 
-**Installation:**  
+**Installation:**    
 1) Put the php files together in, say 'someFolder';
 
 2) Make a folder in 'someFolder', say 'images';
@@ -22,5 +22,5 @@ sudo chmod -R 777 /var/www/html/someFolder
 8) On your local web server, load the url:
 http://localhost/someFolder/thumbsU.php?folder=images
 
-**The Expected Result:**
+**The Expected Result:**    
 The thumbnails will be created and displayed. Each thumbnail is a link to the fullsize image, which may be viewed with panning and accurate zooming, centered on the cursor.
