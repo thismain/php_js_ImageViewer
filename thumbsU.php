@@ -49,7 +49,7 @@ $mt_a=filemtime($a);
 $mt_b=filemtime($b);
 if($mt_a == $mt_b){return 0;}else if($mt_a < $mt_b){return -1;}else{return 1;}
 }
-$imma=glob($dir."*.{jpg,png,gif,jpeg,bmp,gif,JPG,PNG,GIF,JPEG,BMP,GIF}", GLOB_BRACE);
+$imma=glob($dir."*.{jpg,png,gif,jpeg,bmp,JPG,PNG,GIF,JPEG,BMP,WEBP,webp}", GLOB_BRACE);
 usort($imma, "mtimecmp");
 array_reverse($imma);
 for($j=0;$j<count($imma);$j++){$imma[$j]=basename($imma[$j]);}
@@ -64,6 +64,8 @@ if(!$it){$it=strpos($imma[$i],".jpeg");$itype='.jpeg';}
 if(!$it){$it=strpos($imma[$i],".png");$itype='.png';}
 if(!$it){$it=strpos($imma[$i],".gif");$itype='.gif';}
 if(!$it){$it=strpos($imma[$i],".GIF");$itype='.GIF';}
+if(!$it){$it=strpos($imma[$i],".WEBP");$itype='.WEBP';}
+if(!$it){$it=strpos($imma[$i],".webp");$itype='.webp';}
 if($it){$typa[$i]=$itype;}
 }
 
@@ -76,6 +78,8 @@ $source_image = imagecreatefromjpeg($src);
 $source_image = imagecreatefrompng($src);
 }else if($imtype=='.gif'||$imtype=='.GIF'){
 $source_image = imagecreatefromgif($src);
+}else if($imtype=='.webp'||$imtype=='.WEBP'){
+$source_image = imagecreatefromwebp($src);
 }
 
 $width = imagesx($source_image);
@@ -91,6 +95,10 @@ if($imtype=='.jpg'||$imtype=='.JPG'||$imtype=='.jpeg'||$imtype=='.JPEG'){
 imagejpeg($virtual_image, $dest);
 }else if($imtype=='.png'||$imtype=='.PNG'){
 imagepng($virtual_image, $dest);
+}else if($imtype=='.webp'||$imtype=='.WEBP'){
+imagewebp($virtual_image, $dest);
+}else if($imtype=='.gif'||$imtype=='.GIF'){
+imagegif($virtual_image, $dest);
 }
 }//end make_thumb
 

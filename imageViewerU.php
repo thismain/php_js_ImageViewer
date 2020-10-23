@@ -15,7 +15,7 @@ $mt_a=filemtime($a);
 $mt_b=filemtime($b);
 if($mt_a == $mt_b){return 0;}else if($mt_a < $mt_b){return -1;}else{return 1;}
 }
-$imma=glob($dir."*.{jpg,png,gif,jpeg,bmp,gif,JPG,PNG,GIF,JPEG,BMP,GIF}", GLOB_BRACE);
+$imma=glob($dir."*.{jpg,png,gif,jpeg,bmp,JPG,PNG,GIF,JPEG,BMP,WEBP,webp}", GLOB_BRACE);
 usort($imma, "mtimecmp");
 array_reverse($imma);
 for($j=0;$j<count($imma);$j++){$imma[$j]=basename($imma[$j]);}
